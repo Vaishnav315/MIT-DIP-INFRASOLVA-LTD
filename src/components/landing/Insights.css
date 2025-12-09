@@ -1,0 +1,160 @@
+/* --- Global Styles for the Section --- */
+.insights-section {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 120px 20px;
+  /* Increased padding */
+  background-color: var(--bg-light);
+  /* Consistent Light Gray */
+  text-align: center;
+}
+
+/* --- Header Styling --- */
+.insights-header {
+  margin-bottom: 60px;
+}
+
+.insights-subheading {
+  color: var(--primary-blue);
+  /* Consistent Blue */
+  font-size: 1.25rem;
+  /* Standardized label size */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.insights-main-heading {
+  font-size: 3rem;
+  /* Standardized Heading Size */
+  font-weight: 800;
+  color: var(--nav-navy);
+  line-height: 1.1;
+}
+
+/* --- Carousel Wrapper --- */
+.blog-carousel-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* --- Blog Posts Container (The Scrollable Element) --- */
+.blog-posts-container {
+  display: flex;
+  gap: 30px;
+
+  /* KEY STYLING FOR SCROLL EFFECT */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 40px;
+  /* Space for scrollbar/shadow */
+
+  /* Hide default scrollbar */
+  scrollbar-width: none;
+}
+
+.blog-posts-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* --- Individual Card Styling --- */
+.blog-card {
+  flex-shrink: 0;
+  width: calc(33.333% - 20px);
+
+  background-color: #ffffff;
+  border-radius: 16px;
+  /* Matched border radius */
+  text-align: left;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  /* Matched shadow */
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  /* Matched border */
+
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Image Styling --- */
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  /* Standardized aspect ratio */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Content Padding --- */
+.card-content {
+  padding: 32px;
+  /* Increased padding */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nav-navy);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.card-summary {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.read-more-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.read-more-link:hover {
+  color: var(--secondary-blue);
+}
+
+/* --- Responsive Layout (Mobile/Tablet) --- */
+@media (max-width: 1000px) {
+  .blog-carousel-wrapper {
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .blog-posts-container {
+    padding-left: 20px;
+  }
+
+  .blog-card {
+    /* Shows one card + a small peek of the next card on medium screens */
+    width: calc(90% - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card {
+    /* Shows one full card on small screens */
+    width: calc(100% - 20px);
+  }
+}

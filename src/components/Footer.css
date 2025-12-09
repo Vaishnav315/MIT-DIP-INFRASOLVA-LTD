@@ -1,0 +1,176 @@
+/* --- Professional Footer Styling --- */
+.footer-section {
+  background-color: #0F172A;
+  /* Corporate Navy */
+  color: #94A3B8;
+  /* Muted Slate Text */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding: 80px 0 0;
+  border-top: 1px solid #1E293B;
+  font-size: 0.95rem;
+}
+
+.footer-content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  /* Logo Area is wider */
+  gap: 60px;
+  padding: 0 40px 80px;
+  border-bottom: 1px solid #1E293B;
+}
+
+/* --- Brand Column --- */
+.info-column {
+  padding-right: 40px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.footer-logo-box {
+  margin-bottom: 0;
+  /* Aligning in row, no bottom margin needed */
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+.company-mission {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin: 0;
+  /* Handled by Connect margin-top */
+  max-width: 300px;
+}
+
+.footer-connect {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  /* Reduced gap to address text */
+}
+
+.social-links {
+  display: flex;
+  gap: 24px;
+  /* Increased gap between icons */
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1E293B;
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #3B82F6;
+  /* Primary Blue */
+  transform: translateY(-2px);
+}
+
+/* --- Link Columns --- */
+.column-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  /* Bright White Heading */
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #3B82F6;
+  /* Professional Blue Hover */
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom-bar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #64748B;
+}
+
+.bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.bottom-links a {
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottom-links a:hover {
+  color: #94A3B8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .footer-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 24px 60px;
+    gap: 48px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .bottom-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

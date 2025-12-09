@@ -1,0 +1,189 @@
+/* OurStory.css */
+
+/* --- Base/Container Styling --- */
+.about-us-section {
+    padding: 4rem 0;
+    background-color: #f7f9fc;
+    /* Light background color */
+}
+
+@media (max-width: 480px) {
+    .about-us-section {
+        padding: 3rem 0;
+    }
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* Default stack for mobile */
+    gap: 3rem;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+        gap: 2rem;
+    }
+}
+
+/* Two columns on desktop */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+/* --- Left Column: Story and Timeline --- */
+.story-column {
+    flex: 1;
+}
+
+.section-tag {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e70bf;
+    /* Blue color for tag */
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.intro-paragraph.sub-text {
+    font-style: italic;
+    color: #6b7280;
+    margin-bottom: 3rem;
+}
+
+/* --- Timeline Styling --- */
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    /* Space for the vertical line */
+}
+
+/* The vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    /* Position the line centered under the dots */
+    width: 2px;
+    height: 100%;
+    background-color: #1e70bf;
+    /* Blue line color */
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: -23px;
+    width: 10px;
+    height: 10px;
+    background-color: #1e70bf;
+    /* Blue dot color */
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    /* White border to make it stand out */
+    box-shadow: 0 0 0 2px #1e70bf;
+    z-index: 20;
+}
+
+.timeline-year {
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.timeline-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-top: 0.25rem;
+}
+
+/* Style for the last timeline item */
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+
+/* --- Right Column: Image and Impact Card --- */
+.impact-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.image-block {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.team-photo {
+    width: 90%;
+    height: 350px;
+    display: block;
+    border-radius: 12px;
+}
+
+.impact-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    width: 90%;
+}
+
+.section-tag-impact {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e70bf;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.impact-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.impact-description {
+    font-size: 1rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.45;
+}

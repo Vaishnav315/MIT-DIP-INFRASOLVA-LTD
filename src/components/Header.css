@@ -1,0 +1,248 @@
+/* Header CSS - Professional Glassmorphism */
+.site-header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  transition: all 0.3s ease;
+  padding-top: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.header-inner {
+  max-width: 1400px;
+  /* Consistent wide width */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Styling */
+.left::after {
+  content: "MIT-DIP";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--nav-navy);
+  letter-spacing: -0.02em;
+  padding: 0;
+  background: transparent;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Links need to be visible on both White and Image backgrounds.
+   If header layout spans full width, nav is likely on the Right (Image side).
+   Image side is Dark, so White text is good. */
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nav-navy);
+  /* Dark text for readability */
+  text-decoration: none;
+  position: relative;
+  text-transform: capitalize;
+  /* Cleaner look */
+  letter-spacing: normal;
+  mix-blend-mode: normal;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+/* DROPDOWN STYLING */
+.nav-dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* Directly below the parent */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  /* Start slightly down */
+  background: var(--bg-white);
+  min-width: 260px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 12px 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  /* Boxed Style */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1100;
+}
+
+/* Show Dropdown on Hover */
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 24px;
+  color: var(--nav-navy);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-blue);
+  border-left-color: var(--primary-blue);
+}
+
+
+.contact-pill {
+  padding: 12px 28px;
+  background-color: transparent;
+  /* Transparent Default */
+  color: var(--nav-navy);
+  /* Black/Navy Text */
+  border-radius: 0;
+  /* Boxed */
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--nav-navy);
+  /* Thin Border */
+}
+
+.contact-pill:hover {
+  background-color: var(--nav-navy);
+  /* Black/Navy on Hover */
+  border-color: var(--nav-navy);
+  color: white;
+  /* White Text */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--nav-navy);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .nav.desktop-nav {
+    display: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 2000;
+    /* Above overlay */
+  }
+}
+
+/* --- Mobile Menu Overlay --- */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2rem;
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.mobile-link {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nav-navy);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: var(--primary-blue);
+}
+
+.mobile-link.highlight {
+  margin-top: 1rem;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
