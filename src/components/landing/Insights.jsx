@@ -8,21 +8,18 @@ const blogPostsData = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2664", // AI/Predictive
     title: "Predictive Maintenance: The AI-Driven Revolution",
     summary: "Analyzing the paradigm shift from reactive repairs to predictive intervention using real-time sensor fusion and machine learning algorithms.",
-    link: "#",
   },
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070", // Security/IIoT
     title: "Cyber-Physical Security: Fortifying IIoT Networks",
     summary: "Implementing defense-in-depth strategies to secure connected industrial systems and critical assets against emerging digital threats.",
-    link: "#",
   },
   {
     id: 3,
     image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2670", // Data Strategy
     title: "Operational Intelligence: From Data to Strategy",
     summary: "Leveraging advanced data visualization and analytics to empower executive decision-making and optimize operational efficiency.",
-    link: "#",
   },
 ];
 
@@ -51,9 +48,9 @@ const Insights = () => {
               <div className="card-content">
                 <h3 className="card-title">{post.title}</h3>
                 <p className="card-summary">{post.summary}</p>
-                <a href={post.link} className="read-more-link">
+                <span className="read-more-link" style={{ cursor: 'default', opacity: 0.7 }}>
                   Read More →
-                </a>
+                </span>
               </div>
             </div>
           ))}

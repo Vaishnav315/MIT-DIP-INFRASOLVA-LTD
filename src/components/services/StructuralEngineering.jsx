@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './ServicePage.css';
+import structuralEngineering from '../../assets/structural-engineering.jpg';
 
 const StructuralEngineering = () => {
     return (
@@ -11,7 +12,7 @@ const StructuralEngineering = () => {
             <section
                 className="sp-hero-cinematic"
                 style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070')`,
+                    backgroundImage: `url(${structuralEngineering})`,
                     backgroundColor: '#0f172a'
                 }}
             >
@@ -47,7 +48,7 @@ const StructuralEngineering = () => {
                     </div>
                     <div className="sp-staggered-image">
                         <img
-                            src="https://images.unsplash.com/photo-1541888941255-081b746dfebd?q=80&w=2070"
+                            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=3840"
                             alt="Steel Construction Site"
                         />
                     </div>

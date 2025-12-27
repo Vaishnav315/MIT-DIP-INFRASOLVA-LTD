@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './ServicePage.css';
+import architecturalIntelligence from '../../assets/architectural-intelligence.jpg';
 
 const ArchitecturalIntelligence = () => {
     return (
@@ -10,7 +11,7 @@ const ArchitecturalIntelligence = () => {
             {/* 1. HERO SECTION (Cinematic, Parallax) */}
             <section
                 className="sp-hero-cinematic"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2670')` }}
+                style={{ backgroundImage: `url(https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=3840)` }}
             >
                 <div className="sp-hero-cinematic-content">
                     <motion.h1
@@ -44,7 +45,7 @@ const ArchitecturalIntelligence = () => {
                     </div>
                     <div className="sp-staggered-image">
                         <img
-                            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669"
+                            src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=3840"
                             alt="Structural Design Integration"
                         />
                     </div>

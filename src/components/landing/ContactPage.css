@@ -31,6 +31,8 @@
   font-weight: 800;
   margin-bottom: 24px;
   letter-spacing: -0.02em;
+  color: #ffffff;
+  /* Explicitly white to override global H2 styles */
 }
 
 .presence-desc {
@@ -41,6 +43,8 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  color: #f8fafc;
+  /* Light slate for description */
 }
 
 .cta-group {

@@ -32,14 +32,23 @@
 }
 
 /* Logo Styling */
-.left::after {
-  content: "MIT-DIP";
+.site-logo {
   font-weight: 800;
   font-size: 1.5rem;
   color: var(--nav-navy);
   letter-spacing: -0.02em;
-  padding: 0;
-  background: transparent;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 1001;
+  /* Ensure distinct from hamburger */
+}
+
+/* Removed hover color change for logo */
+
+.left::after {
+  content: none;
+  /* Remove old CSS logo */
+  display: none;
 }
 
 .nav {
@@ -48,28 +57,50 @@
   gap: 32px;
 }
 
-/* Links need to be visible on both White and Image backgrounds.
-   If header layout spans full width, nav is likely on the Right (Image side).
-   Image side is Dark, so White text is good. */
+/* Links need to be visible on both White and Image backgrounds. */
 
 .nav-link {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--nav-navy);
-  /* Dark text for readability */
   text-decoration: none;
   position: relative;
   text-transform: capitalize;
-  /* Cleaner look */
   letter-spacing: normal;
-  mix-blend-mode: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
+/* Hover Effect: Simple Blue Text */
 .nav-link:hover {
   color: var(--primary-blue);
 }
 
-/* DROPDOWN STYLING */
+/* Removed Underline Animation */
+.nav-link::after {
+  content: none;
+  display: none;
+}
+
+/* Chevron for Services */
+.chevron {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.6;
+  transform: translateY(1px);
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .chevron {
+  transform: translateY(1px) rotate(180deg);
+}
+
+/* DROPDOWN STYLING - MODERN & ROUNDED */
 .nav-dropdown {
   position: relative;
   height: 100%;
@@ -80,20 +111,23 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  /* Directly below the parent */
+  /* Directly below */
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  /* Start slightly down */
-  background: var(--bg-white);
-  min-width: 260px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  padding: 12px 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 0;
-  /* Boxed Style */
+  transform: translateX(-50%) translateY(15px);
+  /* Modern Floating Style */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  /* Glass effect */
+  min-width: 280px;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1), 0 5px 15px -3px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  /* Inner padding for breathing room */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  /* Rounded corners */
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: 1100;
 }
 
@@ -106,13 +140,23 @@
 
 .dropdown-item {
   display: block;
-  padding: 12px 24px;
-  color: var(--nav-navy);
+  padding: 10px 16px;
+  color: var(--text-dark);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: background 0.2s ease, color 0.2s ease;
-  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  /* Rounded items inside */
+  margin-bottom: 2px;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5f9;
+  /* Soft grey background */
+  color: var(--primary-blue);
+  transform: translateX(4px);
+  /* Subtle slide */
 }
 
 .dropdown-item:hover {

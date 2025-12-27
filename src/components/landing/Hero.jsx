@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import "./Hero.css";
+import heroImage from '../../assets/hero.jpg';
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             Next-generation structural health monitoring.
-            <br />We ensure reliability for the world's most critical assets.
+            <br />We ensure reliability for critical infrastructure assets.
           </motion.p>
 
           <motion.div
@@ -37,7 +38,16 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <a href="#services" className="btn btn-primary">Explore Solutions</a>
+            <a
+              href="#services"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="btn btn-primary"
+            >
+              Explore Solutions
+            </a>
             <Link to="/contact-us" className="btn btn-text">Get in Touch →</Link>
           </motion.div>
         </div>

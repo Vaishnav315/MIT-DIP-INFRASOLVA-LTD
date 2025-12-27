@@ -17,13 +17,13 @@ const ContactPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="presence-title">Global Scale, Local Precision</h2>
+            <h2 className="presence-title">Precision Engineering, Reliable Solutions</h2>
             <p className="presence-desc">
-              We deliver critical infrastructure intelligence—from high-density urban corridors to remote industrial frontiers—ensuring safety and reliability everywhere.
+              We deliver advanced structural health monitoring solutions ensuring safety and reliability for critical infrastructure.
             </p>
             <div className="cta-group">
               <Link to="/contact-us" className="btn btn-primary">Get in Touch</Link>
-              <a href="#careers" className="btn btn-secondary">Join Our Team</a>
+              <Link to="/careers" className="btn btn-secondary">Join Our Team</Link>
             </div>
           </motion.div>
         </div>
@@ -55,13 +55,13 @@ const ContactPage = () => {
                 <span className="icon">📞</span>
                 <div>
                   <p className="contact-label">Direct Line</p>
-                  <a href="tel:+19836231132">+1 (983) 623-1132</a>
+                  <a href="tel:+919234987787">+91 9234987787</a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="icon">📍</span>
                 <div>
-                  <p className="contact-label">Global Headquarters</p>
+                  <p className="contact-label">Head Office</p>
                   <p>Anandalock Building, 2nd Lane<br />Kalipark Narayanapur, Kolkata - 136</p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const ContactPage = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="card-heading">Careers</h3>
-            <h2 className="card-main-title">Architecting the Future of Resilience</h2>
+            <h2 className="card-main-title">Building Resilient Infrastructure</h2>
 
             <p className="careers-text">
               We seek visionary engineers and problem-solvers dedicated to redefining the standards of structural integrity and safety.
@@ -97,9 +97,9 @@ const ContactPage = () => {
               </ul>
             </div>
 
-            <a href="#jobs" className="arrow-link">
+            <Link to="/careers" className="arrow-link">
               See All Roles <span className="arrow">→</span>
-            </a>
+            </Link>
           </motion.div>
 
         </div>

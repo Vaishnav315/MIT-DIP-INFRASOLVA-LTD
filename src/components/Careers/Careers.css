@@ -1,0 +1,631 @@
+/* src/components/Careers/Careers.css */
+
+:root {
+    --car-bg: #ffffff;
+    --car-text: #0F172A;
+    --car-text-light: #64748B;
+    --car-accent: #2563EB;
+    --car-section-padding: 8rem 2rem;
+}
+
+.careers-page {
+    font-family: 'Inter', sans-serif;
+    color: var(--car-text);
+    background: var(--car-bg);
+    overflow-x: hidden;
+}
+
+/* 1. HERO - IMMERSIVE */
+.careers-hero-immersive {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=3840');
+    /* New: Blue Hour City Skyline */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* ... existing styles ... */
+
+/* 5. OPENINGS (List - Dark Theme) */
+.careers-openings-section {
+    padding: var(--car-section-padding);
+    background: #0f172a;
+    /* Slate 900 - Matches Dark UI */
+    color: white;
+}
+
+.openings-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.openings-header h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.openings-header p {
+    color: #cbd5e1;
+    /* Slate-300 - Lighter for visibility */
+    font-size: 1.2rem;
+}
+
+
+.job-list-modern {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.job-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--car-text);
+    /* Navy */
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    /* Light border */
+    height: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.job-row:hover {
+    transform: translateX(5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--car-accent);
+    background: white;
+}
+
+.job-main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.job-meta {
+    color: var(--car-text-light);
+    /* Slate */
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0;
+}
+
+.job-action {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: auto;
+    margin-top: 0;
+    justify-content: flex-end;
+}
+
+.job-type {
+    padding: 0.4rem 0.8rem;
+    background: #f1f5f9;
+    /* Light bg */
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    color: var(--car-text-light);
+}
+
+.apply-arrow {
+    color: var(--car-accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.job-row:hover .apply-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ... existing styles ... */
+
+/* 5. OPENINGS (List Layout - Reverted) */
+.careers-openings-section {
+    padding: 4rem 2rem 8rem 2rem;
+    /* REDUCED TOP PADDING from 8rem to 4rem */
+    background: #f8fafc;
+    /* Alternating Light Grey Background to fix 'emptiness' */
+    color: var(--car-text);
+}
+
+.openings-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.openings-header h2 {
+    font-size: 3rem;
+    color: var(--car-text);
+    /* Dark Text */
+    margin-bottom: 1rem;
+}
+
+.openings-header p {
+    color: var(--car-text-light);
+    /* Slate 600 */
+    font-size: 1.2rem;
+}
+
+.job-list-modern {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    /* Flex column for list */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.job-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--car-text);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    height: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.job-row:hover {
+    background: #ffffff;
+    border-color: var(--car-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.job-main h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-meta {
+    color: var(--car-text-light);
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: row;
+    /* Horizontal meta */
+    gap: 0.8rem;
+    margin-bottom: 0;
+}
+
+.job-action {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: auto;
+    margin-top: 0;
+    justify-content: flex-end;
+}
+
+.job-type {
+    padding: 0.4rem 0.8rem;
+    background: #f1f5f9;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    color: var(--car-text-light);
+}
+
+.apply-arrow {
+    color: var(--car-accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.job-row:hover .apply-arrow {
+    transform: translateX(5px);
+}
+
+.careers-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8));
+}
+
+.careers-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.careers-eyebrow {
+    display: inline-block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* refined typography - CORPORATE BRAND ALIGNMENT */
+.careers-hero-content h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    color: #ffffff !important;
+    /* Standard White */
+    text-shadow: 0 4px 20px rgba(15, 23, 42, 0.5);
+    /* Professional, subtle shadow */
+}
+
+.careers-hero-content h1 span {
+    background: none;
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: initial;
+    color: #3B82F6 !important;
+    /* Corporate Primary Blue */
+    filter: none;
+    text-shadow: none;
+}
+
+.careers-hero-content p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.careers-btn-primary {
+    background: var(--car-accent);
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.5);
+}
+
+.careers-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.6);
+    background: #1d4ed8;
+}
+
+
+/* 2. STAGGERED LAYOUTS */
+.careers-narrative {
+    padding: 4rem 0;
+}
+
+.careers-staggered {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.careers-staggered.reverse .careers-staggered-image {
+    order: 2;
+}
+
+.careers-staggered.reverse .careers-staggered-content {
+    order: 1;
+}
+
+.careers-staggered-image {
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.careers-staggered-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.careers-staggered:hover .careers-staggered-image img {
+    transform: scale(1.03);
+}
+
+.careers-staggered-content {
+    padding: 4rem 6rem;
+}
+
+.section-label {
+    display: block;
+    color: var(--car-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.careers-staggered-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.careers-staggered-content p {
+    font-size: 1.15rem;
+    color: var(--car-text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+
+/* 3. VOICES */
+.careers-voices {
+    background: #F8FAFC;
+    padding: var(--car-section-padding);
+}
+
+.careers-voices h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.voices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.voice-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 1px;
+    border-left: 4px solid var(--car-accent);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    /* Ensure full height fill */
+    display: flex;
+    /* Flex for content alignment */
+    flex-direction: column;
+    justify-content: space-between;
+    /* Space out content to align bottoms if needed, or just fill */
+}
+
+.quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #334155;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.author strong {
+    display: block;
+    color: var(--car-text);
+}
+
+.author span {
+    font-size: 0.9rem;
+    color: var(--car-text-light);
+}
+
+
+/* 4. PERKS (Modern) */
+.careers-perks-section {
+    padding: var(--car-section-padding);
+    background: white;
+}
+
+.careers-text-center {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem auto;
+}
+
+.careers-text-center h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--car-text-light);
+}
+
+.perks-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.perk-card-modern {
+    padding: 2rem;
+    border-radius: 16px;
+    background: #F8FAFC;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.perk-card-modern:hover {
+    background: white;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #e2e8f0;
+}
+
+.perk-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.perk-card-modern h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.perk-card-modern p {
+    color: var(--car-text-light);
+    line-height: 1.6;
+}
+
+
+/* 5. OPENINGS (List) */
+/* 5. OPENINGS (List) - See above */
+
+
+/* 6. FINAL CTA */
+.careers-final-cta {
+    text-align: center;
+    padding: 6rem 1rem;
+    background: #F8FAFC;
+    /* Light Slate - Subtle distinction */
+    color: var(--car-text);
+    border-top: 1px solid #e2e8f0;
+    margin: 0;
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+}
+
+.careers-final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--car-text);
+    text-shadow: none;
+    font-weight: 700;
+}
+
+.careers-final-cta p {
+    color: var(--car-text-light);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: none;
+    font-weight: 400;
+}
+
+.btn-white-outline {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 2px solid var(--car-accent);
+    /* Blue Border */
+    color: var(--car-accent);
+    /* Blue Text */
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: all 0.3s;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-white-outline:hover {
+    background: var(--car-accent);
+    color: white;
+    border-color: var(--car-accent);
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+    .careers-staggered,
+    .careers-staggered.reverse {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .careers-staggered.reverse .careers-staggered-image {
+        order: 0;
+    }
+
+    .careers-staggered.reverse .careers-staggered-content {
+        order: 1;
+    }
+
+    .careers-staggered-image {
+        height: 400px;
+    }
+
+    .careers-staggered-content {
+        padding: 3rem 2rem;
+    }
+
+    .careers-staggered-content h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .job-action {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .careers-hero-content h1 {
+        font-size: 2.5rem;
+    }
+}

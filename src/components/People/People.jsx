@@ -20,10 +20,10 @@ const teamData = [
   { id: 2, name: 'Sayandip Ganguly', role: 'Technical Advisor', title: 'Advisor', image: sayandeepImage, bio: 'Spearheading strategic partnerships and technical innovation initiatives.' }, // Moved & Updated
 
   // Developer (Full-Stack)
-  { id: 6, name: 'M.Prajyoth', role: 'Full-Stack Developer', title: 'Developer', image: '/assets/my image/finley-green.jpg', bio: 'Develops and maintains core application services.' },
+  { id: 6, name: 'M.Prajyoth', role: 'Full-Stack Developer', title: 'Developer', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070', bio: 'Develops and maintains core application services.' },
 
   // NEW: UI/UX Engineer
-  { id: 7, name: 'Khushi', role: 'UI/UX Engineer', title: 'Developer', image: '/assets/my image/harper-scott.jpg', bio: 'Engineering intuitive, accessible, and aesthetic user experience systems.' },
+  { id: 7, name: 'Khushi', role: 'UI/UX Engineer', title: 'Developer', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2070', bio: 'Engineering intuitive, accessible, and aesthetic user experience systems.' },
 ];
 
 const renderTeamCard = (member) => (

@@ -28,6 +28,12 @@ import StructuralEngineering from "./components/services/StructuralEngineering.j
 import RetrofittingRehab from "./components/services/RetrofittingRehab.jsx";
 import StructuralHealthMonitoring from "./components/services/StructuralHealthMonitoring.jsx";
 
+// Careers Page
+import Careers from "./components/Careers/Careers.jsx";
+
+// Under Development Page
+import UnderDevelopment from "./components/UnderDevelopment/UnderDevelopment.jsx";
+
 
 import "./index.css";
 
@@ -83,6 +89,14 @@ export default function App() {
         <Route path="/services/structural-engineering" element={<StructuralEngineering />} />
         <Route path="/services/retrofitting-rehab" element={<RetrofittingRehab />} />
         <Route path="/services/structural-health-monitoring" element={<StructuralHealthMonitoring />} />
+
+        {/* Careers Page */}
+        <Route path="/careers" element={<Careers />} />
+
+        {/* Missing Sections (Under Development) */}
+        <Route path="/projects" element={<UnderDevelopment />} />
+        <Route path="/products" element={<UnderDevelopment />} />
+        <Route path="/blog" element={<UnderDevelopment />} />
 
       </Routes>
 

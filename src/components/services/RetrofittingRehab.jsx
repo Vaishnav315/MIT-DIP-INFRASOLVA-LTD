@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './ServicePage.css';
+import retrofittingRehab from '../../assets/retrofitting-rehab.jpeg';
 
 
 const RetrofittingRehab = () => {
@@ -13,7 +14,7 @@ const RetrofittingRehab = () => {
             <section
                 className="sp-hero-cinematic"
                 style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1503387762-592dea58ef21?q=80&w=2070')`,
+                    backgroundImage: `url(${retrofittingRehab})`,
                     backgroundColor: '#0f172a'
                 }}
             >
@@ -49,7 +50,7 @@ const RetrofittingRehab = () => {
                     </div>
                     <div className="sp-staggered-image">
                         <img
-                            src="https://images.unsplash.com/photo-1531834685032-c74fe1c84de6?q=80&w=2070"
+                            src="https://images.unsplash.com/photo-1588557132645-ff567110cafd?q=80&w=3840"
                             alt="Structural Strengthening"
                         />
                     </div>

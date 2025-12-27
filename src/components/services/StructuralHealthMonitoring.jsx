@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './ServicePage.css';
 
-import shmHero from '../../assets/images/shm-hero-new.png';
+import structuralHealthMonitoring from '../../assets/structural-health-monitoring.jpeg';
 
 const StructuralHealthMonitoring = () => {
     return (
@@ -14,7 +14,7 @@ const StructuralHealthMonitoring = () => {
             <section
                 className="sp-hero-cinematic"
                 style={{
-                    backgroundImage: `url(${shmHero})`,
+                    backgroundImage: `url(${structuralHealthMonitoring})`,
                     backgroundColor: '#0f172a'
                 }}
             >
@@ -50,7 +50,7 @@ const StructuralHealthMonitoring = () => {
                     </div>
                     <div className="sp-staggered-image">
                         <img
-                            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070"
+                            src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=3840"
                             alt="Advanced Sensor Diagnostics"
                         />
                     </div>
@@ -199,7 +199,7 @@ const StructuralHealthMonitoring = () => {
             <section
                 className="sp-cta"
                 style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2670')`,
+                    backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=3840')`,
                     backgroundColor: '#0f172a'
                 }}
             >
