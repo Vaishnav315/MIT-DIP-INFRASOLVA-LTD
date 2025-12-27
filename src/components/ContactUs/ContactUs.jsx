@@ -1,11 +1,14 @@
 // ContactUs.jsx
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './ContactUs.css';
 
 const ContactUs = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     subject: '',
     message: '',
   });
@@ -14,12 +17,31 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // In a real application, you would send formData to an API endpoint here
-    console.log('Form Submitted:', formData);
-    alert('Thank you for your message! We will be in touch shortly.');
-    setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        'service_mv2zhqe',
+        'template_hvsd5o7',
+        form.current,
+        {
+          publicKey: 'auECQy2lc6CjeT4ZW',
+        }
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Message Sent!');
+          setFormData({ user_name: '', user_email: '', subject: '', message: '' });
+        },
+        (error) => {
+          setLoading(false);
+          console.error('FAILED...', error);
+          alert(`Failed to send message. Error: ${JSON.stringify(error)}`);
+        }
+      );
   };
 
   return (
@@ -64,15 +86,15 @@ const ContactUs = () => {
 
         {/* --- Right Column: Contact Form --- */}
         <div className="contact-form-wrapper">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+              <label htmlFor="user_name">Full Name</label>
+              <input type="text" id="user_name" name="user_name" value={formData.user_name} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Work Email</label>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+              <label htmlFor="user_email">Work Email</label>
+              <input type="email" id="user_email" name="user_email" value={formData.user_email} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
@@ -85,7 +107,9 @@ const ContactUs = () => {
               <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required></textarea>
             </div>
 
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="submit-button" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
           </form>
         </div>
       </div>

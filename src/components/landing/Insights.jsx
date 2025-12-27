@@ -5,23 +5,23 @@ import './Insights.css';
 const blogPostsData = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop", // Industrial Tech/Maintenance
-    title: "The Future of Predictive Maintenance in Infrastructure",
-    summary: "Explore how AI and real-time monitoring are revolutionizing the way we manage and maintain critical infrastructure, preventing failures before they happen.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2664", // AI/Predictive
+    title: "Predictive Maintenance: The AI-Driven Revolution",
+    summary: "Analyzing the paradigm shift from reactive repairs to predictive intervention using real-time sensor fusion and machine learning algorithms.",
     link: "#",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop", // Digital Security/Lock
-    title: "Building Trust: Security Best Practices for IoT Devices",
-    summary: "A deep dive into our “security-first” approach, outlining the key principles and protocols we use to protect our clients’ data and connected systems.",
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070", // Security/IIoT
+    title: "Cyber-Physical Security: Fortifying IIoT Networks",
+    summary: "Implementing defense-in-depth strategies to secure connected industrial systems and critical assets against emerging digital threats.",
     link: "#",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop", // Data Graphs/Charts
-    title: "From Data to Decisions: The Power of Analytics Platforms",
-    summary: "Learn how a well-designed analytics platform can turn raw sensor data into actionable insights, empowering leaders to make smarter, faster decisions.",
+    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2670", // Data Strategy
+    title: "Operational Intelligence: From Data to Strategy",
+    summary: "Leveraging advanced data visualization and analytics to empower executive decision-making and optimize operational efficiency.",
     link: "#",
   },
 ];
@@ -31,8 +31,8 @@ const Insights = () => {
     <section className="insights-section">
       {/* Header Section */}
       <div className="insights-header">
-        <h5 className="insights-subheading">INSIGHTS</h5>
-        <h2 className="insights-main-heading">Latest from our blog</h2>
+        <h5 className="insights-subheading">THOUGHT LEADERSHIP</h5>
+        <h2 className="insights-main-heading">Industry Perspectives & Innovation</h2>
       </div>
 
       {/* Blog Posts Grid/Carousel Wrapper */}

@@ -33,10 +33,10 @@ export default function Header() {
           <div className="nav-dropdown">
             <a className="nav-link" href="#services">Services ▾</a>
             <div className="dropdown-menu">
-              <a href="#services" className="dropdown-item">Architectural Intelligence</a>
-              <a href="#services" className="dropdown-item">Structural Engineering</a>
-              <a href="#services" className="dropdown-item">Retrofitting & Rehab</a>
-              <a href="#services" className="dropdown-item">Structural Health Monitoring</a>
+              <Link to="/services/architectural-intelligence" className="dropdown-item">Architectural Intelligence</Link>
+              <Link to="/services/structural-engineering" className="dropdown-item">Structural Engineering</Link>
+              <Link to="/services/retrofitting-rehab" className="dropdown-item">Retrofitting & Rehab</Link>
+              <Link to="/services/structural-health-monitoring" className="dropdown-item">Structural Health Monitoring</Link>
             </div>
           </div>
           <a className="nav-link" href="#why">Why Us</a>

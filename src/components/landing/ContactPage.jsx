@@ -17,10 +17,9 @@ const ContactPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="presence-title">Global Reach, Local Impact</h2>
+            <h2 className="presence-title">Global Scale, Local Precision</h2>
             <p className="presence-desc">
-              From urban centers to remote installations, our monitoring solutions cover
-              critical infrastructure across the globe.
+              We deliver critical infrastructure intelligence—from high-density urban corridors to remote industrial frontiers—ensuring safety and reliability everywhere.
             </p>
             <div className="cta-group">
               <Link to="/contact-us" className="btn btn-primary">Get in Touch</Link>
@@ -41,28 +40,28 @@ const ContactPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="card-heading">Contact Us</h3>
-            <h2 className="card-main-title">Let's build together</h2>
+            <h3 className="card-heading">Connect With Us</h3>
+            <h2 className="card-main-title">Partnering for Excellence</h2>
 
             <div className="contact-details">
               <div className="contact-item">
                 <span className="icon">✉</span>
                 <div>
-                  <p className="contact-label">Email Us</p>
+                  <p className="contact-label">General Inquiries</p>
                   <a href="mailto:mitdip.infrasolva@gmail.com">mitdip.infrasolva@gmail.com</a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="icon">📞</span>
                 <div>
-                  <p className="contact-label">Call Us</p>
+                  <p className="contact-label">Direct Line</p>
                   <a href="tel:+19836231132">+1 (983) 623-1132</a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="icon">📍</span>
                 <div>
-                  <p className="contact-label">Visit Global HQ</p>
+                  <p className="contact-label">Global Headquarters</p>
                   <p>Anandalock Building, 2nd Lane<br />Kalipark Narayanapur, Kolkata - 136</p>
                 </div>
               </div>
@@ -83,10 +82,10 @@ const ContactPage = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="card-heading">Careers</h3>
-            <h2 className="card-main-title">Shape the future of infrastructure</h2>
+            <h2 className="card-main-title">Architecting the Future of Resilience</h2>
 
             <p className="careers-text">
-              We’re always looking for curious builders. Explore open roles and join a team that cares about craft and impact.
+              We seek visionary engineers and problem-solvers dedicated to redefining the standards of structural integrity and safety.
             </p>
 
             <div className="open-positions">

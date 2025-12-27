@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="hero-split hero-right">
         <div className="image-overlay"></div>
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2800"
           alt="Modern Architecture"
         />
       </div>

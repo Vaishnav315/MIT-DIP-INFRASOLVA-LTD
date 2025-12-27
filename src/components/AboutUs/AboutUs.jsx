@@ -2,6 +2,7 @@
 import "./AboutUs.css";
 import CoreValue from "./Corevalue.jsx";
 import OurStory from "./OurStory.jsx";
+import aboutCrane from "../../assets/about-crane.jpg";
 
 export default function AboutUs() {
   return (
@@ -26,7 +27,7 @@ export default function AboutUs() {
 
           {/* RIGHT TOP IMAGES */}
           <div className="about-top-images">
-            <img src="/assets/about-crane.jpg" className="top-img" alt="Active Construction Site" />
+            <img src={aboutCrane} className="top-img" alt="Active Construction Site" />
 
             <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=2070" className="top-img" alt="Industrial Engineering" />
           </div>

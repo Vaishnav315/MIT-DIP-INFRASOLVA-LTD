@@ -1,6 +1,6 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header.jsx";
 
@@ -21,6 +21,12 @@ import ContactUs from "./components/ContactUs/ContactUs.jsx";
 
 //people page
 import People from "./components/People/People.jsx";
+
+// Service Pages
+import ArchitecturalIntelligence from "./components/services/ArchitecturalIntelligence.jsx";
+import StructuralEngineering from "./components/services/StructuralEngineering.jsx";
+import RetrofittingRehab from "./components/services/RetrofittingRehab.jsx";
+import StructuralHealthMonitoring from "./components/services/StructuralHealthMonitoring.jsx";
 
 
 import "./index.css";
@@ -71,6 +77,12 @@ export default function App() {
 
         {/* People/Team Page */}
         <Route path="/team" element={<People />} />
+
+        {/* Service Pages */}
+        <Route path="/services/architectural-intelligence" element={<ArchitecturalIntelligence />} />
+        <Route path="/services/structural-engineering" element={<StructuralEngineering />} />
+        <Route path="/services/retrofitting-rehab" element={<RetrofittingRehab />} />
+        <Route path="/services/structural-health-monitoring" element={<StructuralHealthMonitoring />} />
 
       </Routes>
 

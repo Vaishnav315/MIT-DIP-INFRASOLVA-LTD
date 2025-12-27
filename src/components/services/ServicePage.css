@@ -1,0 +1,1121 @@
+/* src/components/services/ServicePage.css */
+
+/* --- GLOBAL DESIGN TOKENS --- */
+:root {
+    --sp-navy: #0F172A;
+    --sp-blue-primary: #3B82F6;
+    --sp-blue-dark: #1D4ED8;
+    --sp-blue-light: #EFF6FF;
+    --sp-slate-900: #0F172A;
+    --sp-slate-600: #475569;
+    --sp-slate-500: #64748B;
+    --sp-slate-100: #F1F5F9;
+    --sp-white: #FFFFFF;
+
+    --sp-font-sans: 'Inter', -apple-system, sans-serif;
+    --sp-container-max: 1280px;
+    --sp-section-pad: 6rem;
+}
+
+.service-page {
+    font-family: var(--sp-font-sans);
+    color: var(--sp-slate-600);
+    background: var(--sp-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- UTILITIES --- */
+.sp-container {
+    max-width: var(--sp-container-max);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sp-section {
+    padding: var(--sp-section-pad) 0;
+}
+
+.sp-bg-light {
+    background-color: var(--sp-slate-100);
+}
+
+.sp-bg-white {
+    background-color: var(--sp-white);
+}
+
+/* Typography */
+.sp-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--sp-slate-900);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.sp-subtitle {
+    font-size: 1.25rem;
+    color: var(--sp-slate-500);
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.sp-text-center {
+    text-align: center;
+}
+
+.sp-center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- HERO SECTION --- */
+/* Modern gradient overlay + text */
+.sp-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-color: var(--sp-navy);
+    color: white;
+    overflow: hidden;
+}
+
+.sp-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Gradient Mesh Overlay */
+.sp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(15, 23, 42, 0.8) 50%,
+            rgba(59, 130, 246, 0.35) 100%);
+    z-index: 1;
+}
+
+.sp-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+}
+
+.sp-hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(to right, #fff, #bfdbfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sp-hero p {
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    font-weight: 300;
+    max-width: 650px;
+    border-left: 4px solid var(--sp-blue-primary);
+    padding-left: 1.5rem;
+}
+
+/* --- CONTENT SECTIONS --- */
+
+/* Intro Layout */
+.sp-intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sp-intro-text p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.sp-intro-image {
+    position: relative;
+}
+
+.sp-intro-image img {
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Features Grid */
+.sp-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sp-feature-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--sp-slate-100);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #bfdbfe;
+}
+
+.sp-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--sp-blue-primary);
+    transition: height 0.3s ease;
+}
+
+.sp-feature-card:hover::before {
+    height: 100%;
+}
+
+.sp-feature-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--sp-blue-light);
+    color: var(--sp-blue-primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.sp-feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sp-slate-900);
+    margin-bottom: 1rem;
+}
+
+.sp-feature-card p {
+    color: var(--sp-slate-600);
+}
+
+/* Process Section */
+.sp-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+/* Connecting line */
+.sp-process-grid::after {
+    content: '';
+    position: absolute;
+    top: 3rem;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #cbd5e1;
+    z-index: 0;
+}
+
+.sp-process-step {
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.sp-process-number {
+    background: var(--sp-blue-primary);
+    color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid white;
+    /* breaks the line */
+}
+
+/* Industries / Tags */
+.sp-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.sp-tag {
+    background: white;
+    border: 1px solid var(--sp-slate-100);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--sp-slate-600);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sp-tag:hover {
+    border-color: var(--sp-blue-primary);
+    color: var(--sp-blue-primary);
+    transform: scale(1.05);
+}
+
+/* CTA Section */
+.sp-cta {
+    background: var(--sp-navy);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.sp-cta h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.sp-cta-btn {
+    display: inline-block;
+    background: var(--sp-blue-primary);
+    color: white;
+    padding: 1.25rem 3.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 2rem;
+    transition: background 0.2s;
+}
+
+.sp-cta-btn:hover {
+    background: var(--sp-blue-dark);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .sp-process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .sp-process-grid::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sp-hero h1 {
+        font-size: 3rem;
+    }
+
+    .sp-intro-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- HERO SECTION: Modern Split Design --- */
+.sp-hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 85vh;
+    /* Taller hero */
+    background-color: var(--sp-navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-hero-split-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem 4rem 6rem;
+    /* Left padding for visual balance */
+    position: relative;
+    z-index: 10;
+}
+
+.sp-hero-split-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.sp-hero-split-content h1 span {
+    color: var(--sp-blue-primary);
+}
+
+.sp-hero-split-content p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.sp-hero-image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.sp-hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Diagonal Clip */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Decorative element behind text */
+.sp-hero-split-content::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* --- RESPONSIVE for Split Hero --- */
+@media (max-width: 900px) {
+    .sp-hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .sp-hero-split-content {
+        padding: 4rem 2rem;
+        order: 2;
+        /* Text below image on mobile */
+    }
+
+    .sp-hero-split-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .sp-hero-image-container {
+        height: 300px;
+        order: 1;
+    }
+
+    .sp-hero-image-container img {
+        clip-path: none;
+        /* No clip on mobile */
+    }
+}
+
+/* --- HERO SECTION: Immersive Glass Design --- */
+.sp-hero-immersive {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Parallax effect */
+    overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.sp-hero-immersive::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    /* Navy overlay */
+    z-index: 1;
+}
+
+.sp-hero-glass-card {
+    position: relative;
+    z-index: 10;
+    background: rgba(15, 23, 42, 0.75);
+    /* Semi-transparent Navy */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 4rem;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.sp-hero-glass-card h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.sp-hero-glass-card h1 span {
+    color: var(--sp-blue-primary);
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sp-hero-glass-card p {
+    font-size: 1.25rem;
+    color: #e2e8f0;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .sp-hero-glass-card {
+        padding: 2rem;
+    }
+
+    .sp-hero-glass-card h1 {
+        font-size: 2.25rem;
+    }
+}
+
+/* --- HERO SECTION: Corporate Minimalist Design --- */
+.sp-hero-corporate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--sp-navy);
+    min-height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.sp-hero-corporate-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 8rem;
+    /* ample whitespace */
+    z-index: 10;
+}
+
+.sp-hero-corporate-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: white;
+    letter-spacing: -0.01em;
+}
+
+.sp-hero-corporate-content h1 span {
+    color: var(--sp-blue-primary);
+}
+
+.sp-hero-corporate-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.sp-hero-corporate-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.sp-hero-corporate-image img {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 4px;
+    /* Slight radius, very professional */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- STAGGERED LAYOUT (Official Document Style) --- */
+.sp-section-staggered {
+    padding: 8rem 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.sp-staggered-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sp-staggered-grid.reverse .sp-staggered-content {
+    order: 2;
+}
+
+.sp-staggered-grid.reverse .sp-staggered-image {
+    order: 1;
+}
+
+.sp-staggered-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--sp-navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.sp-staggered-content p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.sp-staggered-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Clean Feature List */
+.sp-clean-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sp-clean-list li {
+    display: flex;
+    align-items: flex-start;
+    /* Align with top of text */
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--sp-navy);
+}
+
+.sp-clean-list li svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    color: var(--sp-blue-primary);
+    margin-top: 0.2rem;
+    /* precise visual alignment */
+}
+
+/* Responsive Corporate */
+@media (max-width: 900px) {
+    .sp-hero-corporate {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .sp-hero-corporate-content {
+        padding: 4rem 2rem;
+        order: 2;
+    }
+
+    .sp-hero-corporate-image {
+        padding: 0;
+        height: 60vh;
+        order: 1;
+    }
+
+    .sp-hero-corporate-image img {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .sp-staggered-grid,
+    .sp-staggered-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .sp-staggered-grid.reverse .sp-staggered-content {
+        order: unset;
+    }
+
+    .sp-staggered-grid.reverse .sp-staggered-image {
+        order: unset;
+    }
+}
+
+/* --- TECHNICAL GRID (Key Capabilities) --- */
+.sp-tech-grid {
+    display: grid;
+    /* Force 3 columns on desktop for perfect symmetry (6 items = 2 rows of 3) */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    /* Connected grid look */
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .sp-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 640px) {
+    .sp-tech-grid {
+        grid-template-columns: 1fr;
+        /* 1 column on mobile */
+    }
+}
+
+.sp-tech-card {
+    padding: 2.5rem;
+    border: 1px solid #e2e8f0;
+    margin: -1px 0 0 -1px;
+    /* Overlap borders */
+    transition: all 0.3s ease;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.sp-tech-card:hover {
+    background: #f8fafc;
+    z-index: 2;
+    border-color: var(--sp-blue-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.sp-tech-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--sp-blue-primary);
+    background: rgba(59, 130, 246, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.sp-tech-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--sp-navy);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.sp-tech-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- SECTOR BLOCKS (Applications) --- */
+.sp-sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.sp-sector-block {
+    background: #f8fafc;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 4px solid var(--sp-navy);
+    transition: all 0.3s ease;
+    border-radius: 0 4px 4px 0;
+}
+
+.sp-sector-block:hover {
+    background: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-left-color: var(--sp-blue-primary);
+}
+
+.sp-sector-icon {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.sp-sector-block h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--sp-navy);
+    margin: 0;
+}
+
+/* Responsive specific */
+@media (max-width: 900px) {
+    .sp-sector-grid {
+        grid-template-columns: 1fr;
+        /* Stack clearly on mobile */
+    }
+}
+
+/* --- ITERATION 5: CINEMATIC ENTERPRISE DESIGN --- */
+
+/* 1. Cinematic Hero */
+.sp-hero-cinematic {
+    position: relative;
+    height: 85vh;
+    /* Taller, fuller feel */
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax feel for hero too */
+    color: white;
+    margin-bottom: 0;
+    /* Remove gap */
+}
+
+/* Professional Navy Gradient Overlay - Reverted to Navy */
+.sp-hero-cinematic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient from Solid Navy (Left) to Transparent Polish (Right) */
+    background: linear-gradient(90deg,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(15, 23, 42, 0.8) 40%,
+            rgba(15, 23, 42, 0.2) 100%);
+    z-index: 1;
+}
+
+.sp-hero-cinematic-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding-left: 5%;
+    /* Align with container logic */
+    padding-right: 2rem;
+}
+
+.sp-hero-cinematic h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.sp-hero-cinematic h1 span {
+    color: var(--sp-blue-primary);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sp-hero-cinematic p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin-bottom: 0;
+    max-width: 600px;
+}
+
+/* 2. Process Timeline (Connected Steps - REVERTED) */
+.sp-process-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+/* Connecting Line */
+.sp-process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    /* Align with number center */
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: #e2e8f0;
+    z-index: 0;
+}
+
+.sp-timeline-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Revert card styles if any */
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.sp-timeline-step:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.sp-timeline-number {
+    width: 3rem;
+    height: 3rem;
+    background: #1e3a8a;
+    /* Blue 900 */
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.125rem;
+    outline: 8px solid white;
+    /* Cutout effect on line */
+}
+
+.sp-timeline-step:hover .sp-timeline-number {
+    color: white;
+    /* Keep white */
+}
+
+.sp-timeline-step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    /* Blue 900 */
+    margin-bottom: 0.75rem;
+}
+
+.sp-timeline-step p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .sp-process-timeline {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .sp-process-timeline::before {
+        width: 2px;
+        height: 100%;
+        left: 1.5rem;
+        top: 0;
+    }
+
+    .sp-timeline-step {
+        text-align: left;
+        padding-left: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .sp-timeline-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+}
+
+/* --- ITERATION 8: CLEAN BLUE THEME (BOXES) --- */
+
+/* Revert to Light Grid */
+.sp-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Back to 3 columns */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .sp-industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .sp-industry-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Theme-Matched Clean Box */
+.sp-industry-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+
+    /* Clean Default State */
+    border: 1px solid #e2e8f0;
+    /* Subtle Grey Border */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    /* Soft Shadow */
+
+    display: flex;
+    flex-direction: column;
+    /* Back to Vertical Box */
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+/* Hover: Highlight with Theme Blue */
+.sp-industry-card:hover {
+    transform: translateY(-8px);
+    /* MATCHING THEME: Use the Brand Blue for interaction */
+    border-color: var(--sp-blue-primary);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.15);
+    /* Blue-tinted shadow */
+}
+
+/* Icon: Theme Blue by default */
+.sp-industry-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--sp-blue-primary);
+    /* Brand Blue Icon */
+    background: transparent;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+.sp-industry-content {
+    width: 100%;
+}
+
+.sp-industry-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--sp-navy);
+    /* Navy Title */
+    margin-bottom: 0.75rem;
+}
+
+.sp-industry-card p {
+    font-size: 1rem;
+    color: #64748b;
+    /* Slate Text */
+    line-height: 1.6;
+}
+
+/* No more pseudo-element gradients - keeping it clean as per "boxes" request */
+.sp-industry-card::before {
+    display: none;
+}
+
+/* 4. Scrollable Background CTA (Parallax) */
+.sp-cta {
+    background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* THE KEY PARALLAX PROPERTY */
+    position: relative;
+    padding: 8rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.sp-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    /* Dark overlay for text */
+    z-index: 1;
+}
+
+.sp-cta .sp-container {
+    position: relative;
+    z-index: 2;
+}
