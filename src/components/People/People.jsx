@@ -9,7 +9,7 @@ import sayandeepImage from '../../assets/sayandeep.jpg';
 
 const teamData = [
   // CEO
-  { id: 1, name: 'Ava Johnson', role: 'Director', title: 'Director', image: ceoImage, bio: 'Architecting the corporate vision and driving market expansion strategies.' },
+  { id: 1, name: 'Mithu Ghosh', role: 'Director', title: 'Director', image: ceoImage, bio: 'Architecting the corporate vision and driving market expansion strategies.' },
 
   // Directors
   { id: 3, name: 'Vaishnav Nath', role: 'Associate Director', title: 'Director', image: vaishnavImage, bio: 'Leading Product Strategy and Software Engineering divisions.' },
